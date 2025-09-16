@@ -41,6 +41,11 @@ def create_app():
         except Exception:
             return jsonify(error="unresolvable"), 500
 
+    # added test route to verify 
+    @app.route("/evatest")
+    def evatest():
+        return jsonify(test="ok")
+
     @app.errorhandler(500)
     def handle_500(_):
         return "Internal Server Error", 500
