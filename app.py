@@ -41,7 +41,7 @@ def create_app():
         except Exception:
             return jsonify(error="unresolvable"), 500
 
-    # added test route to verify 
+    # added test route to verify
     @app.route("/evatest")
     def evatest():
         return jsonify(test="ok")
